@@ -104,32 +104,32 @@ class FileWriter(
         addGitIgnore: Boolean
     ) {
         // make the 3 module
-//        moduleFile.toPath().resolve(preferenceService.preferenceState.glueModuleName).toFile().apply {
-//            mkdirs()
-//            // create the gradle file
-//            templateWriter.createGradleFile(
-//                moduleFile = this,
-//                moduleName = moduleFile.path.split(File.separator).toList().last().plus("-")
-//                    .plus(preferenceService.preferenceState.glueModuleName),
-//                moduleType = moduleType,
-//                useKtsBuildFile = useKtsBuildFile,
-//                defaultKey = GLUE_KEY,
-//                gradleFileFollowModule = gradleFileFollowModule,
-//                packageName = packageName.plus(".${preferenceService.preferenceState.glueModuleName}")
-//            )
-//
-//            // create default packages
-//            createDefaultPackages(
-//                moduleFile = this,
-//                packageName = packageName.plus(".${preferenceService.preferenceState.glueModuleName}")
-//            )
-//
-//            if (addGitIgnore) {
-//                createGitIgnore(
-//                    moduleFile = this
-//                )
-//            }
-//        }
+        moduleFile.toPath().resolve(preferenceService.preferenceState.glueModuleName).toFile().apply {
+            mkdirs()
+            // create the gradle file
+            templateWriter.createGradleFile(
+                moduleFile = this,
+                moduleName = moduleFile.path.split(File.separator).toList().last().plus("-")
+                    .plus(preferenceService.preferenceState.glueModuleName),
+                moduleType = moduleType,
+                useKtsBuildFile = useKtsBuildFile,
+                defaultKey = GLUE_KEY,
+                gradleFileFollowModule = gradleFileFollowModule,
+                packageName = packageName.plus(".${preferenceService.preferenceState.glueModuleName}")
+            )
+
+            // create default packages
+            createDefaultPackages(
+                moduleFile = this,
+                packageName = packageName.plus(".${preferenceService.preferenceState.glueModuleName}")
+            )
+
+            if (addGitIgnore) {
+                createGitIgnore(
+                    moduleFile = this
+                )
+            }
+        }
 
         moduleFile.toPath().resolve(preferenceService.preferenceState.implModuleName).toFile().apply {
             mkdirs()

@@ -52,7 +52,7 @@ const val DEFAULT_USE_KTS_FILE_EXTENSION = true
 const val DEFAULT_GRADLE_FILE_NAMED_AFTER_MODULE = false
 const val DEFAULT_ADD_README = true
 const val DEFAULT_ADD_GIT_IGNORE = false
-const val DEFAULT_API_MODULE_NAME = "api"
+const val DEFAULT_API_MODULE_NAME = "service"
 const val DEFAULT_GLUE_MODULE_NAME = "glue"
 const val DEFAULT_IMPL_MODULE_NAME = "impl"
 
